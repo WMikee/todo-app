@@ -17,24 +17,15 @@ export const Footer: React.FC<Props> = ({
   handleFilterChange,
 }) => {
   return (
-    <footer>
-      <span>
-        <strong>{activeCount}</strong>
-        task(s) left
-      </span>
-
+    <footer className="fixed bottom-1 w-70 rounded-t-2xl p-4 left-1/2 transform -translate-x-1/2 bg-[#1F2123] flex items-center gap-6 justify-between">
       <Filters
         filterSelected={filterSelected}
         onFilterChange={handleFilterChange}
       />
-      {completedCount > 0 && (
-        <button
-          className="border rounded-2xl border-purple-900 text-purple-600 hover:border-transparent hover:bg-purple-600  hover:text-white"
-          onClick={onclearClearCompleted}
-        >
-          Clear completed
-        </button>
-      )}
+      <span className="flex gap-1">
+        <strong className="text-[#F63E3E]">{activeCount}999</strong>
+        task(s) left
+      </span>
     </footer>
   );
 };

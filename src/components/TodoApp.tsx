@@ -48,7 +48,12 @@ function TodoApp() {
   return (
     <div className="todoapp-container">
       <Header onAddTodo={handleAddTodo} />
-      <Todos todos={filteredTodos}></Todos>
+      <h2 className="flex w-3/10 mt-2 mx-2 p-2 bg-[#262A32] rounded-tl-lg rounded-tr-lg">
+        List
+      </h2>
+      <div className=" bg-[#262A32] h-screen mx-2">
+        <Todos todos={filteredTodos}></Todos>
+      </div>
       <Footer
         activeCount={activeCount}
         completedCount={completedCount}

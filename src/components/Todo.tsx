@@ -6,10 +6,10 @@ export const Todo: React.FC<TodoType> = ({ id, title, completed }) => {
   const { removeTodo, toggleCompleted } = useContext(TodoContext);
 
   return (
-    <div className="todo-container">
-      <div className="label-container">
+    <div className="bg-[#1F2123] rounded-lg p-8 flex items-center">
+      <div className="flex w-full gap-5">
         <input
-          className="toggle"
+          className="size-8"
           type="checkbox"
           checked={completed}
           onChange={(event) => {
@@ -19,7 +19,7 @@ export const Todo: React.FC<TodoType> = ({ id, title, completed }) => {
         <label className="">{title}</label>
       </div>
       <button
-        className="destroy"
+        className="bg-red-600 w-10"
         onClick={() => {
           removeTodo({ id });
         }}
