@@ -20,7 +20,7 @@ export function CreateTodo({ saveTodo }: Props) {
   return (
     <form className="flex w-full" action="submit" onSubmit={handleSubmit}>
       <input
-        className="bg-[#262A32] w-full p-3 pr-30 rounded-2xl text-left mx-2"
+        className=" bg-[#262A32] w-full px-5 py-4 pr-30 rounded-3xl text-left mx-2 outline-none"
         value={inputValue}
         onChange={(e) => {
           setInputValue(e.target.value);

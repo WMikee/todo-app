@@ -46,12 +46,12 @@ function TodoApp() {
   };
 
   return (
-    <div className="todoapp-container">
+    <div className="text-[1.2rem] max-w-180 justify-center mx-auto">
       <Header onAddTodo={handleAddTodo} />
-      <h2 className="flex w-3/10 mt-2 mx-2 p-2 bg-[#262A32] rounded-tl-lg rounded-tr-lg">
+      <h2 className="relative -bottom-0.5 flex w-32 mt-2 mx-2 px-6 py-1 bg-[#262A2F] rounded-tl-2xl rounded-tr-2xl">
         List
       </h2>
-      <div className=" bg-[#262A32] h-screen mx-2">
+      <div className=" bg-[#262A2F] min-h-screen mx-2 rounded-tr-3xl min-w-80">
         <Todos todos={filteredTodos}></Todos>
       </div>
       <Footer

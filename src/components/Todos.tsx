@@ -7,8 +7,8 @@ interface Props {
 
 export const Todos: React.FC<Props> = ({ todos }) => {
   return (
-    <div className="pt-6 px-4">
-      <ul className="flex flex-col gap-3">
+    <div className="pt-6 px-5">
+      <ul className="flex flex-col gap-2">
         {todos.map((todo) => (
           <li key={todo.id} className={`${todo.completed ? "completed" : ""}`}>
             <Todo

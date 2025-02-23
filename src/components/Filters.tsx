@@ -11,7 +11,6 @@ export const Filters: React.FC<Props> = ({
   filterSelected,
   onFilterChange,
 }) => {
-  // Ahora handleChange recibe el evento de click en un <li>
   const handleChange = (event: React.MouseEvent<HTMLLIElement>) => {
     const value = event.currentTarget.getAttribute("data-value") as FilterValue;
     onFilterChange(value);
