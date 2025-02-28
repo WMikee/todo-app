@@ -20,9 +20,13 @@ export const TodoContext = createContext<TodoContextProps>({
 });
 
 const mockTodos = [
-  { id: "1", title: "Learn React", completed: false },
-  { id: "2", title: "Learn TypeScript", completed: false },
-  { id: "3", title: "Learn something more...", completed: true },
+  { id: crypto.randomUUID(), title: "Learn React", completed: false },
+  { id: crypto.randomUUID(), title: "Learn TypeScript", completed: false },
+  {
+    id: crypto.randomUUID(),
+    title: "Learn something more...",
+    completed: true,
+  },
 ];
 
 export const TodoProvider: React.FC<{ children: ReactNode }> = ({

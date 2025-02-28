@@ -11,9 +11,7 @@ interface Props {
 
 export const Footer: React.FC<Props> = ({
   activeCount,
-  completedCount,
   filterSelected,
-  onclearClearCompleted,
   handleFilterChange,
 }) => {
   return (
