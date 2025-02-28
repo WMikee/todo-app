@@ -5,7 +5,8 @@ const openai = new OpenAI({
   dangerouslyAllowBrowser: true,
 });
 
-async function reordered(tasks: string[]) {
+export async function reordered(tasks: string[]) {
+  console.log("API Fetching...");
   const tasksString = tasks
     .map((task, index) => `${index + 1}. ${task}`)
     .join("\n");
@@ -31,7 +32,7 @@ Please ignore any sensitive or absurd language in the tasks and focus solely on 
     messages: [{ role: "system", content: prompt }],
   });
 
-  console.log(response.choices[0].message.content);
+  return response.choices[0].message.content;
 }
 
 const tasks = ["have lunch", "have breakfast", "bathe my cat", "go to work"];

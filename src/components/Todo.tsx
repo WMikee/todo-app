@@ -53,6 +53,7 @@ export const Todo: React.FC<TodoType> = ({ id, title, completed }) => {
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
+        onClick={() => console.log(id)}
       >
         <div className="flex w-full gap-5 items-center">
           <label
